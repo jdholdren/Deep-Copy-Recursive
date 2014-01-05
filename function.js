@@ -7,14 +7,11 @@ function copy(obj)
 {
 	var copyObj = {};
 
-	for (var i in obj)
-	{
-		if (typeof(obj[i]) !== 'object')
-		{
+	for (var i in obj) {
+		if (typeof(obj[i]) !== 'object') {
 			copyObj[i] = obj[i];
 		}
-		else
-		{
+		else {
 			copyObj[i] = this.copy(obj[i]);
 		}
 	}
